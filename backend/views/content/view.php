@@ -46,7 +46,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['image', ['width' => '100', 'height' => '100']],
             ],
             ['attribute' => 'image',
-                'label' => 'Image path'
+                'label' => 'Image path',
+                'value' => function ($data) {
+                    if ($data->image == '') {
+                        return 'NO IMAGE UPLOADED BY CREATER';
+                    } else {
+                        return $data->image;
+                    }
+                }
             ],
             'uid',
             [

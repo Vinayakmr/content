@@ -78,8 +78,9 @@ $this->title = 'Create Contents';
 ?>
 <div  id="res" ></div><br/><br/>
 
-<?= $form->field($model, 'upload')->fileInput() ?>
-
+<?= $form->field($model, 'upload')->fileInput()
+         ->label('Upload Image(Optional)')   
+?>
 
 <div class="form-group">
     <?= Html::submitButton('Submit', ['style' => 'width:100px;height:30px;background-color:#0D9EF9;', 'class' => 'btn btn-success']) ?>

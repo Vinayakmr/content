@@ -148,6 +148,7 @@ class ContentController extends Controller {
                         $model->image = $filePath;
                     }
                 }
+                $model->uid=Yii::$app->user->identity->id;
 
                 if ($model->save(false)) {
                     Yii::$app->session->setFlash('success', 'Your content is saved successfully.Please wait for approval.');
