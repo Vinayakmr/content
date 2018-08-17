@@ -36,6 +36,10 @@ $this->params['breadcrumbs'][] = $this->title;
         content:" * ";
         color:red;
     }
+    
+    h4{
+        color:red;
+    }
 
 </style>
 
@@ -44,6 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="site-login">
         <h1><?= Html::encode($this->title) ?></h1>
+        <h4>Only valid administrative username and password  can login, others cannot.</h4>
         <p>Please fill out the following fields to login:</p>
 
         <div class="row">
